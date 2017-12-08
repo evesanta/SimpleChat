@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- <meta content="width=device-width,initial-scale=1,minimal-ui" name="viewport"> -->
+    <link rel="stylesheet" type="text/css" href="./css/main.css">  
+</head>
+
+<body>
+    <header>
+        <h1>Taketter</h1>
+    </header>
+    
+    <main>
+        <div id = "input_form">
+            <input v-model="message" placeholder="edit me">
+            <button v-on:click = "sendMessage">send</button>
+
+        </div>
+
+        <div id="chat_text">
+            <div v-for="message in chatLog">
+                {{message.text}}
+            </div>
+        </div>
+
+    </main>
+
+    <script type="text/javascript" src="./lib/vue"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+</body>
+</html>
